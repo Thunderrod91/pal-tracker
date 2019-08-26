@@ -4,6 +4,12 @@ notifications:
   email: false
 env:
   - RELEASE_TAG="release-$TRAVIS_BUILD_NUMBER"
+  - CF_API_URL="api.sys.evans.pal.pivotal.io"
+  - CF_ORG="vton.corelogic.com"
+  - CF_SPACE="sandbox"
+  - CF_USERNAME="vton@corelogic.com"
+  - CF_PASSWORD="dcmg6rhb"
+  - GITHUB_USERNAME="Thunderrod91"
 if: tag IS blank
 
 
@@ -15,8 +21,8 @@ jobs:
       install: skip
       script: ./gradlew clean build
       before_deploy:
-        - git config --local user.name "Travis CI"
-        - git config --local user.email "travis@example.com"
+        - git config --local user.name "Thunderrod91"
+        - git config --local user.email "thunderrod91@gmail.com"
         - git tag -f $RELEASE_TAG
       deploy:
         provider: releases
