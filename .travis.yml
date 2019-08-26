@@ -10,6 +10,7 @@ env:
   - CF_USERNAME="vton@corelogic.com"
   - CF_PASSWORD="dcmg6rhb"
   - GITHUB_USERNAME="Thunderrod91"
+  - GITHUB_OAUTH_TOKEN=8524a51666a5cfd46f15f3401b44c4c5e3c8d50d
 if: tag IS blank
 
 
