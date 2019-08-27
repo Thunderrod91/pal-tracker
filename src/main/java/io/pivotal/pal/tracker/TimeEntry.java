@@ -1,8 +1,11 @@
 package io.pivotal.pal.tracker;
 
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Data
 public class TimeEntry {
 
     private long id;
@@ -29,46 +32,6 @@ public class TimeEntry {
 
     public TimeEntry() {
 
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setProjectId(long projectId) {
-        this.projectId = projectId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public void setHours(int hours) {
-        this.hours = hours;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public long getProjectId() {
-        return projectId;
-    }
-
-    public long getUserId() {
-        return userId;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public int getHours() {
-        return hours;
     }
 
     @Override
